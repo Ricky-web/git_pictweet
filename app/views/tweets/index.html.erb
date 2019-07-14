@@ -5,6 +5,7 @@
       <span class="name">
         <a href="#">
           <span>投稿者</span><%= tweet.user.nickname %>
+          <!--SQL発行n+1-->
         </a>
     </div>
   <% end %>
