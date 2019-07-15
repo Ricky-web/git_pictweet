@@ -6,6 +6,9 @@
           <span><%= image_tag 'arrow_top.png' %></span>
           <ul class="more_list">
             <li>
+              <%= link_to 'EDIT', "/tweets/#{tweet.id}/edit", method: :get %>
+            </li>
+            <li>
               <%= link_to 'DELETE', "/tweets/#{tweet.id}", method: :delete %>
             </li>
           </ul>
