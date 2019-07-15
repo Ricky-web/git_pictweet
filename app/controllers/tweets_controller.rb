@@ -22,6 +22,11 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
   
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(image: tweet_params[:image], text: tweet_params[:text]) if tweet.user_id == current_user.id
+  end
+  
   private
   def tweet_params
     params.permit(:image, :text)
