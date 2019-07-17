@@ -71,3 +71,7 @@ gem 'rails-controller-testing'
 gem 'factory_bot_rails'
 gem 'kaminari'
 gem 'devise'
+
+group :test do
+  gem 'faker'
+end
